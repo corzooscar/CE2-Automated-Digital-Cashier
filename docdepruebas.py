@@ -3,6 +3,4 @@ print("hace hambre")
 print("aro")
 print ("sisas")
 print ("leonardo es fan de cristiano")
-print("John es gay en closetado")
-print (" leonardo juega en mrk fc")
-print("John reconoce a los gay por algo")
+
