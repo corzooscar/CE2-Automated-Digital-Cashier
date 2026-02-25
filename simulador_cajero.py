@@ -1,11 +1,12 @@
 saldo_inicial = 1000.0
 opcion=int (input("cuantas operaciones desea relizar: "))
-for i in  range(opcion):
+while true:
     print("menu de opciones: ")
     print("1. consultar saldo")
     print("2. retirar dinero")
     print("3. depositar dinero")
-    opcion_2 = int(input("elija una opcion (1-3): "))
+    print("finalizar programa")
+    opcion_2 = int(input("elija una opcion (1-4): "))
     cant_opera=+1
 if opcion_2 == 1:
     print("su saldo actual es: ",saldo_inicial)
@@ -21,4 +22,7 @@ if opcion_2 == 3:
         if depositar>0:
             saldo_inicial+=depositar
             print("su nuevo saldo es: ",saldo_inicial)
+elif opcion_2 == 4:
+    print("proceso finalizado")
+    break
 
