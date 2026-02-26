@@ -12,7 +12,7 @@ while True:
     print("finalizar programa")
     opcion_2 = int(input("elija una opcion (1-4): "))
     cant_opera=+1
-    
+    print("-"*30)
     # OPCION 1
 
     if opcion_2== 1:
@@ -22,11 +22,15 @@ while True:
         print("fecha: ",fecha_actual)
         print("hora: ",hora_actual)
         print("Tu saldo actual es: ", saldo_inicial )
+        print("-"*30)
         print("\n") 
         
+    if cant_opera == opcion:
+        print("proceso finalizado")
+        break
 
     
-    if opcion_2 == 2:
+    """"  if opcion_2 == 2:
         retirar_dinero = float(input("cuanto desea retirar?:"))
         if retirar_dinero>saldo_inicial:
             print("no tienes fondos suficientes")
@@ -34,12 +38,13 @@ while True:
         else :
             saldo_inicial-=retirar_dinero
             print("su nuevo saldo es: ",saldo_inicial,"su monto retirado fue: ",retirar_dinero)
+            print("-"*30)
     if opcion_2 == 3:
             depositar=float(input("cuanto dinero desea depositar: "))
             if depositar>0:
                 saldo_inicial+=depositar
                 print("su nuevo saldo es: ",saldo_inicial)
+                print("-"*30)
     elif opcion_2 == 4:
-        print("proceso finalizado")
-        break
+        print("proceso finalizado")"""""
 
