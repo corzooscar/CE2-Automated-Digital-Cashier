@@ -1,37 +1,35 @@
-saldo = 1000
-operaciones = int(input("Introduce el numero de operaciones a realizar: "))
+saldo_inicial = 1000.0
 
-for i in range(operaciones):
-    accion = int(input("Elija la accion a realizar: 1.Consultar saldo // 2.retirar dinero // 3.Depositar dinero: "))
+opcion=int (input("cuantas operaciones desea relizar: "))
+while True:
+    print("menu de opciones: ")
+    print("1. consultar saldo")
+    print("2. retirar dinero")
+    print("3. depositar dinero")
+    print("finalizar programa")
+    opcion_2 = int(input("elija una opcion (1-4): "))
+    cant_opera=+1
+    
+    # OPCION 1
 
-    while accion < 1 or accion > 3:
-        int(input("Opcion invalida, intentelo de nuevo: "))
+    if opcion == 1:
 
-#OPCION 1 - MOSTRAR SALDO
-    if accion == 1:
-        print ("Su saldo actual es de:" ,saldo)
-#---------------------------------------------------------------------------------------------------------
-#OPCION 2 - RETIRAR SALDO
-    if accion == 2:
-        valor_retirar = int(input("Ingrese el valor a retirar: "))
-        while valor_retirar < 0:
-            valor_retirar = int(input("Monto invalido, ingrese un valor positivo: "))
+        print("Tu saldo actual es: ", saldo_inicial )
+        print("\n")
+    
+    if opcion_2 == 2:
+        retirar_dinero = float(input("cuanto desea retirar?:"))
+        if retirar_dinero>saldo_inicial:
+            print("no tienes fondos suficientes")
+        else :
+            saldo_inicial-=retirar_dinero
+            print("su nuevo saldo es: ",saldo_inicial,"su monto retirado fue: ",retirar_dinero)
+    if opcion_2 == 3:
+            depositar=float(input("cuanto dinero desea depositar: "))
+            if depositar>0:
+                saldo_inicial+=depositar
+                print("su nuevo saldo es: ",saldo_inicial)
+    elif opcion_2 == 4:
+        print("proceso finalizado")
+        break
 
-        if saldo < valor_retirar:
-            print("Fondos insuficiente")
-
-        if saldo >= valor_retirar:
-             print("Retiro validado, nuevo saldo disponible: ",saldo-valor_retirar)
-#-------------------------------------------------------------------------------------------------------------
-#OPCIONES 3 - DEPOSITAR DINERO
-    if accion == 3:
-        saldo = saldo-valor_retirar
-        deposito = int(input("Ingrese el monto a depositar: "))
-        while deposito < 0:
-            deposito = int(input("Error, ingrese un valor positivo: "))
-
-        if deposito > 0:
-            print ("Su nuevo saldo es: ", saldo+deposito)
-
-
-print(" Gracias por usar el cajero automatico")
