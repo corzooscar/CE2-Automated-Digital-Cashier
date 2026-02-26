@@ -15,7 +15,8 @@ while True:
     if opcion == 1:
 
         print("Tu saldo actual es: ", saldo_inicial )
-        print("\n")
+        print("\n") 
+        print("silvio")
     
     if opcion_2 == 2:
         retirar_dinero = float(input("cuanto desea retirar?:"))
