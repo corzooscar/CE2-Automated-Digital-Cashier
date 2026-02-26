@@ -14,5 +14,3 @@ if accion == 3:
 
 
 print(" Gracias por usar el cajero automatico")
-         
-       
