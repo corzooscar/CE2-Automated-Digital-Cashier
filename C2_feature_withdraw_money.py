@@ -17,4 +17,4 @@ elif opcion == 2:
         saldo -= monto_retirar
         print(F"\nRetiro exitoso. Su nuevo saldo actualizado es de: {saldo}\n")
         print("\nGracias por usar el cajero automático")
-        print("holaaaaaaaaaaaa")
+    
