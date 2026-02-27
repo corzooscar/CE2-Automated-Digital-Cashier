@@ -1,4 +1,4 @@
-Saldo = 1000
+saldo = 1000
 Cant_Operaciones = int(input(" --- ¡Bienvenido al Cajero Automático! ---\n ¿Cuántas operaciones desea realizar?:  "))
 
 for i in range (Cant_Operaciones) :
