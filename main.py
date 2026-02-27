@@ -33,18 +33,19 @@ for i in range (Cant_Operaciones) :
             print(F"\nRetiro exitoso. Su nuevo saldo actualizado es de: {saldo}\n")
             print("\nGracias por usar el cajero automático")
 
+    
     if Opcion == 3:
-        
-        try: 
-            deposito = int(input("Ingrese el monto a depositar: "))
+        deposito = int(input("Ingrese el monto a depositar: "))      
+        try:       
             while deposito < 0:
-                deposito=int(input("Error, ingrese un valor positivo: "))
+                    deposito=int(input("Error, ingrese un valor positivo: "))
         except ValueError:
-            print("\nMonto no válido. Por favor, ingrese un número entero.\n")
-            deposito = int(input("Ingrese el monto a depositar: ")) 
+                print("\nMonto no válido. Por favor, ingrese un número entero.\n")
+                deposito = int(input("Ingrese el monto a depositar: ")) 
 
-    if deposito > 0:
-            print ("Su nuevo saldo es: ", saldo+deposito)
+        if deposito > 0:
+            saldo += deposito
+            print ("Su nuevo saldo es: ", saldo)
 
 
 print(" Gracias por usar el cajero automatico")
